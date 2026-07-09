@@ -234,7 +234,7 @@ pages.forEach((page, i) => {
     <div class="num">${i + 1}</div>
     <div class="thumb-box">
       <img src="${page.img}" alt="${page.title}"
-           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+           
       <div class="placeholder" style="display:none; flex-direction:column; align-items:center; justify-content:center;">
         ${placeholderSVG}
         <span>Add image<br>${page.img}</span>
