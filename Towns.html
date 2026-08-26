@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leave a Review — Botanical Blooms</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Cormorant+Garamond:ital@0;1&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root { --navy: #1c2f52; --navy-light: #2f4a7a; --gold: #c8a05a; --cream: #faf6ee; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: radial-gradient(ellipse at top, #fffdf9 0%, var(--cream) 60%);
+background-image: url('hub-background.jpg') ;
+     background-size : 100% 100% ;
+    background-repeat:no-repeat;
+    background-position: center;
+    overflow-x: hidden;
+
+
+    
+    color: var(--navy); min-height: 100vh;
+    display: flex; align-items: center; justify-content: center; padding: 40px 20px;
+  }
+  .card { max-width: 480px; text-align: center; }
+  .eyebrow { font-size: 0.75rem; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); font-weight: 500; margin-bottom: 14px; }
+  h1 { font-family: 'Playfair Display', serif; font-weight: 700; font-size: clamp(1.6rem, 6vw, 2.2rem); margin-bottom: 16px; }
+  .divider { display: flex; align-items: center; justify-content: center; gap: 14px; margin: 0 auto 24px; max-width: 220px; }
+  .divider .line { flex: 1; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+  .divider .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--gold); }
+  p.msg { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.1rem; color: var(--navy-light); margin-bottom: 30px; line-height: 1.5; }
+  .countries { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .countries a {
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    padding: 12px 14px; border-radius: 10px; background: #fff;
+    border: 1px solid rgba(200,160,90,0.3); color: var(--navy);
+    text-decoration: none; font-weight: 500; font-size: 0.9rem;
+    box-shadow: 0 3px 12px rgba(28,47,82,0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  }
+  .countries a:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(28,47,82,0.15); border-color: var(--gold); }
+  .flag { font-size: 1.2rem; }
+  footer { margin-top: 32px; font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--navy-light); font-size: 0.95rem; }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <div class="eyebrow">Botanical Blooms</div>
+  <h1>Thank You for Coloring</h1>
+  <div class="divider"><span class="line"></span><span class="dot"></span><span class="line"></span></div>
+  <p class="msg">I'm an independent artist, and every review helps new colorists find this book. Tap your country below to leave a quick, honest review — it means more than you know.</p>
+  <div class="countries" id="countries"></div>
+  <footer>Happy coloring 🌸</footer>
+</div>
+
+<script>
+  // غيّر PUT_ASIN_HERE بالـ ASIN بتاع كتابك بعد ما ينشر
+  const ASIN = "9798194077021";
+
+  const stores = [
+    { flag: "🇺🇸", label: "US", domain: "amazon.com" },
+    { flag: "🇬🇧", label: "UK", domain: "amazon.co.uk" },
+    { flag: "🇩🇪", label: "Germany", domain: "amazon.de" },
+    { flag: "🇫🇷", label: "France", domain: "amazon.fr" },
+    { flag: "🇪🇸", label: "Spain", domain: "amazon.es" },
+    { flag: "🇮🇹", label: "Italy", domain: "amazon.it" },
+    { flag: "🇳🇱", label: "Netherlands", domain: "amazon.nl" },
+    { flag: "🇵🇱", label: "Poland", domain: "amazon.pl" },
+    { flag: "🇸🇪", label: "Sweden", domain: "amazon.se" },
+    { flag: "🇧🇪", label: "Belgium", domain: "amazon.com.be" },
+    { flag: "🇮🇪", label: "Ireland", domain: "amazon.ie" },
+    { flag: "🇯🇵", label: "Japan", domain: "amazon.co.jp" },
+    { flag: "🇨🇦", label: "Canada", domain: "amazon.ca" },
+    { flag: "🇦🇺", label: "Australia", domain: "amazon.com.au" }
+  ];
+
+  const container = document.getElementById('countries');
+  stores.forEach(store => {
+    const a = document.createElement('a');
+    a.href = `https://www.${store.domain}/dp/${ASIN}`;
+    a.target = "_blank";
+    a.innerHTML = `<span class="flag">${store.flag}</span> ${store.label}`;
+    container.appendChild(a);
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Botanical Blooms — Let's Stay in Touch</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Cormorant+Garamond:ital@0;1&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+  :root { --forest: #2d3b28; --forest-light: #3f5136; --gold: #b8934a; --cream-light: #fdf8ee; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background-image: url('hub-background.jpg') ;
+     background-size : 100% 100% ;
+    background-repeat:no-repeat;
+    background-position: center;
+    overflow-x: hidden;
+    background-color: #f6ecd9;
+    color: var(--forest); min-height: 100vh;
+    display: flex; align-items: center; justify-content: center;
+    padding: 60px 24px;
+  }
+  .card { max-width: 480px; width: 100%; text-align: center; }
+  .eyebrow { font-size: 0.8rem; letter-spacing: 5px; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 16px; }
+  h1 { font-family: 'Playfair Display', serif; font-weight: 700; font-size: clamp(2rem, 7vw, 2.8rem); margin-bottom: 14px; }
+  .divider { display: flex; align-items: center; justify-content: center; gap: 12px; margin: 0 auto 22px; max-width: 200px; }
+  .divider .line { flex: 1; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+  .divider .heart { color: var(--gold); font-size: 0.9rem; }
+  p.msg { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.2rem; color: var(--forest-light); margin-bottom: 36px; line-height: 1.5; }
+  .links { display: flex; flex-direction: column; gap: 14px; }
+  .links a {
+    display: flex; align-items: center; gap: 14px; padding: 18px 24px; border-radius: 14px;
+    background: var(--cream-light); border: 1px solid rgba(184,147,74,0.25);
+    color: var(--forest); text-decoration: none; font-weight: 500; font-size: 1.05rem;
+    box-shadow: 0 3px 14px rgba(45,59,40,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .links a:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(45,59,40,0.18); }
+  .links a .icon { font-size: 1.3rem; width: 28px; text-align: center; }
+  .links a .arrow { margin-left: auto; color: var(--gold); font-size: 1.1rem; }
+  .links a.primary { background: var(--forest); color: var(--cream-light); border-color: var(--gold); }
+  .links a.primary .icon, .links a.primary .arrow { color: var(--gold); }
+  .links a.primary:hover { background: var(--forest-light); }
+  .icon.instagram { background: linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .icon.tiktok { color: #000; }
+  .icon.pinterest { color: #E60023; }
+  .icon.book { color: var(--gold); }
+.icon.palette { background: linear-gradient(45deg,#ff6b6b,#feca57,#48dbfb,#a55eea); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.icon.facebook {  color : blue ;}
+
+  .icon.youtube { color: #FF0000; }
+  footer { margin-top: 40px; font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--forest-light); font-size: 1.05rem; }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <div class="eyebrow">Botanical Blooms</div>
+  <h1>Let's Stay in Touch</h1>
+  <div class="divider"><span class="line"></span><span class="heart">♥</span><span class="line"></span></div>
+  <p class="msg">New designs, coloring inspiration, and behind-the-scenes — pick where you'd like to follow along.</p>
+
+  <div class="links">
+  
+  <a href="PUT_REVIEW_PAGE_LINK_HERE" class="primary"><span class="icon"><i class="fa-solid fa-star"></i></span>Leave a Review<span class="arrow">›</span></a>
+    <a href="PUT_GALLERY_LINK_HERE"><span class="icon palette"><i class="fa-solid fa-palette"></i></span>See Every Page Colored<span class="arrow">›</span></a>
+    <a href="https://www.instagram.com/0.botanical.blooms.0?igsi=MTg3MGIzZ29lamExbA=="><span class="icon instagram"><i class="fa-brands fa-instagram"></i></span>Instagram<span class="arrow">›</span></a>
+    <a href="https://www.tiktok.com/@yb.books8?_r=1&_t=ZS-994ud2X0ni5"><span class="icon tiktok"><i class="fa-brands fa-tiktok"></i></span>TikTok<span class="arrow">›</span></a>
+    <a href="https://pin.it/5KVxGdKsm"><span class="icon pinterest"><i class="fa-brands fa-pinterest"></i></span>Pinterest<span class="arrow">›</span></a>
+    <a href="https://youtube.com/@botanical.blooms?si=sDRaGK6tInKDvlj6"><span class="icon youtube"><i class="fa-brands fa-youtube"></i></span>YouTube<span class="arrow">›</span></a>
+
+    <a href="https://www.facebook.com/share/18c6XJhgoR/"><span class="icon facebook"><i class="fa-brands fa-facebook"></i></span>Facebook<span class="arrow">›</span></a>
+ 
+    <a href="PUT_KDP_AUTHOR_PAGE_LINK_HERE"><span class="icon book "><i class="fa-solid fa-book"></i></span>More Books<span class="arrow">›</span></a>
+
+  
+  
+  </div>
+
+  <footer>Thank you for being part of our creative community! ♥</footer>
+</div>
+
+</body>
+</html>
